@@ -1,17 +1,17 @@
-/* eslint-disable no-unused-vars */
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './Login';
-import Register from './Register';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 function App() {
   return (
-    <div className='bg-blue-900 h-screen'>
+    <div className='flex h-screen'>
+      <BrowserRouter>
         <Routes>
+          <Route path='/' element={<Navigate to="/login" />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          {/* Ajoutez d'autres routes ici */}
         </Routes>
+      </BrowserRouter>
     </div>
   );
 }
