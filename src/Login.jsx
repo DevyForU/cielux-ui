@@ -1,11 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'; // Importez React depuis 'react', pas depuis "react"
+import React, { useState } from 'react'; // Importez React depuis 'react', pas depuis "react"
 import './App.css';
 
 // Importez les icônes de React Icons
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Login = () => {
+  const [email, setEmail] = useState(''); // État pour l'e-mail
+  const [password, setPassword] = useState(''); // État pour le mot de passe
+
+  // Gestionnaire d'événement pour la saisie de l'e-mail
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  // Gestionnaire d'événement pour la saisie du mot de passe
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   return (
     <>
       <div className='relative overflow-auto min-h-screen flex'>
@@ -17,20 +30,11 @@ const Login = () => {
               <div className='sm:text-lg xl:text-md text-gray-200 font-medium'>Fill in your personal details and start managing your files, docs, ... with us</div>
             </div>
             <ul className="circles">
-              {/* Placeholder circles */}
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+            {/* Placeholder circles */}
+            {[...Array(13)].map((_, index) => (
+              <li key={index}></li>
+            ))}
+          </ul>
           </div>
           <div className='md:flex md:items-center md:justify-center sm:w-auto md:h-full w-2/5 xl:w-2/5 p-10 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white'>
             <div className='max-w-md w-full space-y-8'>
@@ -59,17 +63,19 @@ const Login = () => {
               <form className="mt-8 space-y-6" action="#" method="POST">
                 <input type="hidden" name="remember" value="true" />
                 <div className="relative">
-                  <div className= "absolute bottom-2 right-3 mt-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
+                  {email.includes('@') && (
+                    <div className="absolute bottom-2 right-3 mt-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  )}
                   <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
-                  <input className="w-full bg-gray-300 text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500" type="email" placeholder="" value="" />
+                  <input className="w-full bg-gray-300 text-base px-4 py-2 border-b border-gray-300 focus:outline-none text-gray-600 rounded-2xl focus:border-indigo-500" type="email" placeholder="" value={email} onChange={handleEmailChange} />
                 </div>
                 <div className="mt-8 content-center">
                   <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Password</label>
-                  <input className="w-full bg-gray-300 content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="" value="" />
+                  <input className="w-full bg-gray-300 content-center text-base px-4 py-2 border-b rounded-2xl border-gray-500 text-gray-600 focus:outline-none focus:border-indigo-500" type="password" placeholder="" value={password} onChange={handlePasswordChange} />
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
