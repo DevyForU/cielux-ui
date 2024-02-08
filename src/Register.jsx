@@ -94,8 +94,8 @@ const Register = () => {
         </div>
     )}
     {/* Ajouter l'icône de l'œil pour afficher le mot de passe */}
-    <div className="absolute top-0 right-0 mt-4 mr-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div className="absolute top-0 right-0 mt-8 mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-100 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 2a7 7 0 00-7 7c0 1.568.515 3.019 1.386 4.202M17.764 16.5A7.96 7.96 0 0019 13c0-4.418-3.582-8-8-8s-8 3.582-8 8c0 1.713.538 3.295 1.452 4.612M12 16.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />
         </svg>
