@@ -8,9 +8,9 @@ import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 const Login = () => {
   return (
     <>
-      <div className='relative min-h-screen flex'>
+      <div className='relative overflow-auto min-h-screen flex'>
         <div className='flex flex-col sm:flex-row items-center md:items-start sm:justify-content sm:justify-center md:justify-start flex-auto bg-white'>
-          <div className='w-[70vw] h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-blue-800 text-white bg-no-repeat bg-cover relative'>
+          <div className='w-[70vw] h-[100vh] hidden md:flex flex-auto items-center justify-center p-10 overflow-auto bg-blue-800 text-white bg-no-repeat bg-cover relative'>
             <div className='absolute bg-gradient-to-b from-indigo-600 to-blue-300 opacity-75 inset-0 z-0'></div>
             <div className='w-full z-10'>
               <div className='sm:text-4xl xl:text-7xl font-bold leading-tight mb-3'> CielUX </div>
@@ -32,7 +32,7 @@ const Login = () => {
               <li></li>
             </ul>
           </div>
-          <div className='md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full w-2/5 xl:w-2/5 p-10 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white'>
+          <div className='md:flex md:items-center md:justify-center sm:w-auto md:h-full w-2/5 xl:w-2/5 p-10 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white'>
             <div className='max-w-md w-full space-y-8'>
               <div className='text-center'>
                 <h2 className='mt-6 text-3xl from-bold text-blue-700'>Hello Fellow, Welcome back!</h2>
@@ -88,7 +88,7 @@ const Login = () => {
                   </button>
                 </div>
                 <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
-                  <span> Don't have an account?</span>
+                  <span> Do not have an account?</span>
                   <a href="#" className="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
                 </p>
               </form>
