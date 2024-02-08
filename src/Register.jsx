@@ -92,6 +92,7 @@ const Register = () => {
                             </a>
                         </div>
 
+
                         <form className="space-y-3 flex flex-col" method="POST" onSubmit={handleSubmit}>
                             <input type="hidden" name="remember" value="true" />
                             <div className="relative">
