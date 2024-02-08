@@ -65,11 +65,11 @@ const Login = () => {
                     </svg>
                   </div>
                   <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
-                  <input className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500" type="email" placeholder="" value="" />
+                  <input className="w-full bg-gray-300 text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500" type="email" placeholder="" value="" />
                 </div>
                 <div className="mt-8 content-center">
                   <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Password</label>
-                  <input className="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="" value="" />
+                  <input className="w-full bg-gray-300 content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="" value="" />
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
