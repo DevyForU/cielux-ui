@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaShare } from 'react-icons/fa';
 
+
 const FileList = () => {
     const [files, setFiles] = useState([]);
 
@@ -17,6 +18,7 @@ const FileList = () => {
                 console.error('Error fetching files:', error);
             });
     }, []);
+
 
     // Fonction pour gérer le partage d'un fichier
     const handleShare = (fileId) => {
@@ -39,6 +41,7 @@ const FileList = () => {
                         {/* Options d'action pour le partage et autres */}
                         <button onClick={() => handleShare(file.id)}><FaShare/>Share</button>
                         {/* Ajoutez d'autres boutons ou icônes pour d'autres actions */}
+
                     </li>
                 ))}
             </ul>
