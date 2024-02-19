@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(email.trim() || !password.trim()){
+    if(!email.trim() || !password.trim()){
       alert("Please enter both email and password.");
       return;
     }
